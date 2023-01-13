@@ -33,12 +33,14 @@
 			<artifactId>slf4j-simple</artifactId>
 			<version>${slf4jVersion}</version>
 		</dependency>
-		<!-- SPARQL query engine -->
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.jena/jena-arq -->
 		<dependency>
-		    <groupId>io.github.andreacimminoarriaga</groupId>
-		    <artifactId>sparql-streamline</artifactId>
-		    <version>1.1.8</version>
+			<groupId>org.apache.jena</groupId>
+			<artifactId>jena-arq</artifactId>
+			<version>4.7.0</version>
 		</dependency>
+		
 		
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
