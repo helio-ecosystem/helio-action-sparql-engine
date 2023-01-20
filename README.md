@@ -21,3 +21,6 @@ This action must be provided with a JSON as configuration, specifying the follow
  - 'data-format' can be specified if the RDF data to be queried is not in TURTLE, possible values are turtle, ttl, json-ld, json-ld-11, rdf/xml, n-triples, nt, n3.
  - 'output-format' can be specified to change the serialisation of the output report (by default in `JSON` for SELECT and ASK and `TURTLE` for CONSTRUCT and DESCRIBE). Possible values for ASK are json or xml (note that csv and tsv for ASK is not supported). For SELECT possible values are json, csv, tsv, xml. For DESCRIBE and CONSTRUCT are turtle, ttl, json-ld, json-ld-11, rdf/xml, n-triples, nt, n3.
  - 'namespace' can be specified for declaring a URL as namespace for the SPARQL query
+ 
+ ### Geosparql support
+ The SPARQL Engine implements the [geosparql features provided by jena](https://jena.apache.org/documentation/geosparql/index.html)
