@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.github.helio-ecosystem</groupId>
   <artifactId>helio-action-sparql-engine</artifactId>
-  <version>0.1.0</version>
+  <version>0.2.0</version>
   <name>SPARQL Engine Action</name>
   <description>This action allows to query RDF data using SPARQL</description>
   
@@ -40,7 +40,13 @@
 			<artifactId>jena-arq</artifactId>
 			<version>4.7.0</version>
 		</dependency>
-		
+		<!-- https://mvnrepository.com/artifact/org.apache.jena/jena-geosparql -->
+		<dependency>
+		    <groupId>org.apache.jena</groupId>
+		    <artifactId>jena-geosparql</artifactId>
+		    <version>4.7.0</version>
+		</dependency>
+				
 		
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
