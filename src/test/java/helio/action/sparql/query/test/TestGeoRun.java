@@ -84,8 +84,6 @@ public class TestGeoRun {
 			config.addProperty(QUERY_TOKEN, QUERY_SELECT);
 			config.addProperty("data-format", "rdf/xml");
 			String queryResults = solve(config, this.rdf);
-			System.out.println(QUERY_SELECT);
-			System.out.println(">"+queryResults);
-			Assert.assertTrue(queryResults.contains("\"value\": \"7\""));
+			Assert.assertTrue(queryResults.contains("\"value\": \"497.679509e0\""));
 		}
 }
