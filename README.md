@@ -8,7 +8,7 @@ Use the following coordinates for import this action:
 
 ````json
 {
-    "source": "https://github.com/helio-ecosystem/helio-action-sparql-engine/releases/download/v1.2.0/helio-action-sparql-engine-1.2.0.jar",
+    "source": "https://github.com/helio-ecosystem/helio-action-sparql-engine/releases/download/v1.2.0/helio-action-sparql-engine-1.2.1.jar",
     "clazz": "helio.action.sparql.query.SparqlEngine",
     "type": "ACTION"
 }
