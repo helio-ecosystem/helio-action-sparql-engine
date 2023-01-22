@@ -102,10 +102,9 @@ public class SparqlEngine implements Action {
 	        	throw new ActionException("Query not supported, provided one query SELECT, ASK, DESCRIBE or CONSTRUCT");
 	        }
 		}catch(QueryException e) {
-			e.printStackTrace();
-			throw new ActionException(e.toString());
+			throw new ActionException(e.getMessage());
         }catch(Exception e) {
-        	throw new ActionException(e.toString());
+        	throw new ActionException(e.getMessage());
         }
         return new String(stream.toByteArray());
 	}

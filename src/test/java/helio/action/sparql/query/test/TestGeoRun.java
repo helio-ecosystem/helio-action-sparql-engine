@@ -25,13 +25,13 @@ public class TestGeoRun {
 				+ "		PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>  \n"
 				+ "		PREFIX ssn: <http://purl.oclc.org/NET/ssnx/ssn#>  \n"
 				+ "     PREFIX spatialF: <http://jena.apache.org/function/spatial#> \n"
-				+ "     PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/>"
+				+ "     PREFIX units: <http://www.opengis.net/def/uom/OGC/1.0/>\n"
 				+ "		SELECT ?point ?point2 ?distance WHERE {\n"
 				+ "		?subj wgs:lat ?lat .\n"
 				+ "  	?subj wgs:long ?lon .\n"
-				+ "  	BIND(spatialF:convertLatLon(?lat, ?lon) as ?point) ."
-				+ "  	BIND(spatialF:convertLatLon(32, 35.5) as ?point2) ."
-				+ "     BIND( spatialF:distance(?point, ?point2, units:kilometer) as ?distance) . "
+				+ "  	BIND(spatialF:convertLatLon(?lat, ?lon) as ?point) . \n"
+				+ "  	BIND(spatialF:convertLatLon(32, 35.5) as ?point2) .\n"
+				+ "     BIND( spatialF:distance(?point, ?point2, units:kilometer) as ?distance) . \n"
 				+ "}";
 		private static final String QUERY_TOKEN = "query";
 
@@ -81,9 +81,12 @@ public class TestGeoRun {
 		public void testRunQueryFormatDefault() {
 			JsonObject config = new JsonObject();
 			// SELECT
+			System.out.println(this.rdf);
 			config.addProperty(QUERY_TOKEN, QUERY_SELECT);
+			System.out.println(QUERY_SELECT);
 			config.addProperty("data-format", "rdf/xml");
 			String queryResults = solve(config, this.rdf);
+			System.out.println(queryResults);
 			Assert.assertTrue(queryResults.contains("\"value\": \"497.679509e0\""));
 		}
 }
